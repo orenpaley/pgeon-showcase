@@ -66,7 +66,7 @@ Upload → Prepare → Extract → Review → Edit → Export
 
 ## Architecture
 
-For details, see [Architecture](docs/architecture.md).
+For details, see [Architecture](/architecture.md).
 
 ## Engineering highlights
 

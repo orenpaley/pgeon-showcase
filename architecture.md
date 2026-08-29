@@ -82,31 +82,6 @@ When the user navigates, corrects, deletes, or promotes a variation, Pgeon resto
 
 The document is serialized into PGN for export.
 
-## Extraction and validation boundary
-
-Image recognition is probabilistic. Chess-rule validation is deterministic.
-
-```mermaid
-flowchart TD
-    A["Prepared image"] --> B["Extraction model"]
-    B --> C["Structured candidates"]
-    C --> D["Schema validation"]
-    D --> E["Chess-rule validation"]
-    E --> F["Accepted move or correction"]
-```
-
-The extraction model proposes what appears on the scoresheet. It does not have authority to mutate the final game without validation.
-
-This boundary handles cases such as:
-
-- Ambiguous handwriting
-- Missing or duplicated moves
-- Incorrect squares
-- Illegal continuations
-- Promotion choices
-- Partial extraction results
-- Provider failures
-
 ## Move-tree representation
 
 Chess variations are represented as a tree instead of a flat move array.
@@ -183,4 +158,4 @@ Extraction depends on network and provider availability. Legal chess processing 
 
 ## Related documentation
 
-- [Project overview](../README.md)
+- [Project overview](/README.md)
